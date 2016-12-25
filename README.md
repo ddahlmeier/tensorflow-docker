@@ -25,7 +25,7 @@ docker build -t tensorflow-docker .
 Start the docker container. 
 
 ```
-docker run -p 0.0.0.0:8888:8888 -it tensorflow-docker
+docker run -p 8888:8888 -it tensorflow-docker
 [I 10:44:46.418 NotebookApp] Writing notebook server cookie secret to /root/.local/share/jupyter/runtime/notebook_cookie_secret
 [I 10:44:46.544 NotebookApp] Serving notebooks from local directory: /notebooks
 [I 10:44:46.544 NotebookApp] 0 active kernels 
@@ -34,4 +34,10 @@ docker run -p 0.0.0.0:8888:8888 -it tensorflow-docker
 ```
 
 The container starts a jupyter notebook. Open your browser and
-navigate to the URL shown in the docker logs, e.g., **http://[ip addresses on your system]:8888/?token=ef79794abe5ad8259148074e62acf3f097e18234fed085d0** in the example above.
+navigate to the URL shown in the docker logs and replace IP address with the IP address of your docker machine which is shown when you start your docker terminal, for me this was, **http://192168.99.100:8888/?token=ef79794abe5ad8259148074e62acf3f097e18234fed085d0**.
+
+![Image of Jupyter](./images/startup.png)
+
+Open the getting_started.ipynb notebook to start playing with some simple Tensorflow examples.
+
+![Image of Jupyter](./images/notebook.png)
